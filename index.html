@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-card">
+      <div class="card-content">
+        <h2>Member Details</h2>
+        <form>
+          <div class="field">
+            <label for="text-input">Member Name:</label>
+            <input type="text" id="text-input" name="text-input">
+          </div>
+          <div class="field">
+            <label for="dropdown">Appointment Reason:</label>
+            <select id="dropdown" name="dropdown">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="datetime-picker">Appointment Date/Time:</label>
+            <input type="datetime-local" id="datetime-picker" name="datetime-picker">
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Case History</h2>
+      <div class="cases">
+        <div class="case active">
+          <h3>Active Case 1</h3>
+          <p>Description of the active case 1.</p>
+        </div>
+        <div class="case active">
+          <h3>Active Case 2</h3>
+          <p>Description of the active case 2.</p>
+        </div>
+        <div class="case active">
+          <h3>Active Case 3</h3>
+          <p>Description of the active case 3.</p>
+        </div>
+        <div class="case inactive">
+          <h3>Inactive Case</h3>
+          <p>Description of the inactive case.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

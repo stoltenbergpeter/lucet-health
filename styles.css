@@ -1,29 +1,30 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #f4f4f4; /* Light gray background */
   margin: 0;
   padding: 20px;
 }
 
 .container {
   display: flex;
+  
   justify-content: space-between;
 }
 
 .form-card {
   width: 48%;
-  background-color: #fff;
-  padding: 20px;
+  background-color: #ffffff; /* White */
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ffffff; /* White */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 48%;
+  width: 30%;
 }
 
 .card-content {
@@ -31,6 +32,10 @@ body {
 }
 
 .field {
+  margin-bottom: 20px;
+}
+
+.long_field {
   margin-bottom: 20px;
 }
 
@@ -42,16 +47,17 @@ label {
 
 input[type="text"],
 select,
-input[type="datetime-local"] {
+input[type="datetime-local"],
+textarea {
   width: 80%;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #ced4da; /* Light gray border */
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #007bff; /* Lucet Health blue */
+  color: #ffffff; /* White text */
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -59,7 +65,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 button[type="submit"]:focus {
@@ -71,7 +77,7 @@ button[type="submit"]:focus {
 }
 
 .case {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4; /* Light gray case background */
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 10px;
@@ -86,9 +92,16 @@ button[type="submit"]:focus {
 }
 
 .case.active {
-  background-color: #b8e994;
+  background-color: #2ebd8b; /* Lucet Health green for active cases */
 }
 
 .case.inactive {
-  background-color: #ff7979;
+  background-color: #ff7979; /* Lucet Health red for inactive cases */
+}
+/* The rest of your CSS remains unchanged */
+
+.header-divider {
+  height: 5px;
+  background-color: #851c55; /* Lucet Health header color */
+  margin-bottom: 20px;
 }

@@ -5,51 +5,69 @@
 </head>
 <body>
   <div class="container">
-    <div class="form-card">
+    <div class="card">
       <div class="card-content">
         <h2>Member Details</h2>
+         <div class="header-divider"></div>
         <form>
           <div class="field">
             <label for="text-input">Member Name:</label>
-            <input type="text" id="text-input" name="text-input">
+            <input type="text" id="member-name" name="member-name">
           </div>
           <div class="field">
-            <label for="dropdown">Appointment Reason:</label>
-            <select id="dropdown" name="dropdown">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </select>
+            <label for="text-input">Member ID:</label>
+            <input type="text" id="member-id" name="member-id">
           </div>
           <div class="field">
-            <label for="datetime-picker">Appointment Date/Time:</label>
-            <input type="datetime-local" id="datetime-picker" name="datetime-picker">
+            <label for="text-input">Insurance:</label>
+            <input type="text" id="insurance" name="insurance">
           </div>
-          <button type="submit">Submit</button>
+          <div class="field">
+            <label for="text-input">Last Intent:</label>
+            <input type="text" id="last-intent" name="last-intent">
+          </div>
+          <div class="field">
+          <div class="long_field">
+        <label for="textarea">Last Utterance:</label>
+        <textarea id="last-utterance" name="last-utterance"></textarea>
+      </div>
+          </div>
         </form>
       </div>
     </div>
+
+    <div class="card">
+      <h2>Active 
+      </h2>
+       <div class="header-divider"></div>
+      <div class="long_field">
+        <label for="text-input">Case Name:</label>
+        <input type="text" id="case-name" name="case-name">
+      </div>
+      <div class="long_field">
+        <label for="textarea">Case Notes:</label>
+        <textarea id="case-notes" name="case-notes"></textarea>
+      </div>
+    </div>
+
     <div class="card">
       <h2>Case History</h2>
+       <div class="header-divider"></div>
       <div class="cases">
         <div class="case active">
-          <h3>Active Case 1</h3>
-          <p>Description of the active case 1.</p>
+          <h3>Appointment with Provider</h3>
+          <p>6-18-23: Scheduled appt. with Dr. Jones' Office.</p>
         </div>
         <div class="case active">
-          <h3>Active Case 2</h3>
-          <p>Description of the active case 2.</p>
-        </div>
-        <div class="case active">
-          <h3>Active Case 3</h3>
-          <p>Description of the active case 3.</p>
-        </div>
-        <div class="case inactive">
-          <h3>Inactive Case</h3>
-          <p>Description of the inactive case.</p>
+          <h3>Answered Questions</h3>
+          <p>3-15-23: Provided available community resources.</p>
         </div>
       </div>
     </div>
+
   </div>
+
+
+
 </body>
 </html>

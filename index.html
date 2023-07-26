@@ -5,9 +5,10 @@
 </head>
 <body>
   <div class="container">
-    <div class="form-card">
+    <div class="card">
       <div class="card-content">
         <h2>Member Details</h2>
+         <div class="header-divider"></div>
         <form>
           <div class="field">
             <label for="text-input">Member Name:</label>
@@ -26,15 +27,19 @@
             <input type="text" id="last-intent" name="last-intent">
           </div>
           <div class="field">
-            <label for="text-input">Last Utterance:</label>
-            <input type="text" id="last-utterance" name="last-utterance">
+          <div class="long_field">
+        <label for="textarea">Last Utterance:</label>
+        <textarea id="last-utterance" name="last-utterance"></textarea>
+      </div>
           </div>
         </form>
       </div>
     </div>
 
     <div class="card">
-      <h2>Active Case</h2>
+      <h2>Active 
+      </h2>
+       <div class="header-divider"></div>
       <div class="long_field">
         <label for="text-input">Case Name:</label>
         <input type="text" id="case-name" name="case-name">
@@ -47,10 +52,11 @@
 
     <div class="card">
       <h2>Case History</h2>
+       <div class="header-divider"></div>
       <div class="cases">
         <div class="case active">
           <h3>Appointment with Provider</h3>
-          <p>6-18-23: Scheduled appt. with Dr. Jones' Office .</p>
+          <p>6-18-23: Scheduled appt. with Dr. Jones' Office.</p>
         </div>
         <div class="case active">
           <h3>Answered Questions</h3>
@@ -58,8 +64,8 @@
         </div>
       </div>
     </div>
+
   </div>
-   <div class="header-divider"></div>
 
   <script>
     // JavaScript function to get query parameter value by name
@@ -68,14 +74,23 @@
       return urlParams.get(name);
     }
 
-    // Insert query parameter value into the member-name field
+    // Insert query parameter value into the input fields
     const memberNameInput = document.getElementById('member-name');
-    const memberNameQueryParam = getQueryParam('MemberName');
-    if (memberNameQueryParam) {
-      memberNameInput.value = memberNameQueryParam;
-    }
+    const memberIDInput = document.getElementById('member-id');
+    const insuranceInput = document.getElementById('insurance');
+    const lastIntentInput = document.getElementById('last-intent');
+    const lastUtteranceInput = document.getElementById('last-utterance');
+
+    memberNameInput.value = getQueryParam('MemberName') || '';
+    memberIDInput.value = getQueryParam('MemberID') || '';
+    insuranceInput.value = getQueryParam('Insurance') || '';
+    lastIntentInput.value = getQueryParam('LastIntent') || '';
+    lastUtteranceInput.value = getQueryParam('LastUtterance') || '';
   </script>
 </body>
-  
+</html>
+</body>
+</html>
+
 </body>
 </html>

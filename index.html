@@ -5,10 +5,9 @@
 </head>
 <body>
   <div class="container">
-    <div class="card">
+    <div class="form-card">
       <div class="card-content">
         <h2>Member Details</h2>
-         <div class="header-divider"></div>
         <form>
           <div class="field">
             <label for="text-input">Member Name:</label>
@@ -27,19 +26,15 @@
             <input type="text" id="last-intent" name="last-intent">
           </div>
           <div class="field">
-          <div class="long_field">
-        <label for="textarea">Last Utterance:</label>
-        <textarea id="last-utterance" name="last-utterance"></textarea>
-      </div>
+            <label for="text-input">Last Utterance:</label>
+            <input type="text" id="last-utterance" name="last-utterance">
           </div>
         </form>
       </div>
     </div>
 
     <div class="card">
-      <h2>Active 
-      </h2>
-       <div class="header-divider"></div>
+      <h2>Active Case</h2>
       <div class="long_field">
         <label for="text-input">Case Name:</label>
         <input type="text" id="case-name" name="case-name">
@@ -52,11 +47,10 @@
 
     <div class="card">
       <h2>Case History</h2>
-       <div class="header-divider"></div>
       <div class="cases">
         <div class="case active">
           <h3>Appointment with Provider</h3>
-          <p>6-18-23: Scheduled appt. with Dr. Jones' Office.</p>
+          <p>6-18-23: Scheduled appt. with Dr. Jones' Office .</p>
         </div>
         <div class="case active">
           <h3>Answered Questions</h3>
@@ -64,10 +58,24 @@
         </div>
       </div>
     </div>
-
   </div>
+   <div class="header-divider"></div>
 
+  <script>
+    // JavaScript function to get query parameter value by name
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
 
-
+    // Insert query parameter value into the member-name field
+    const memberNameInput = document.getElementById('member-name');
+    const memberNameQueryParam = getQueryParam('MemberName');
+    if (memberNameQueryParam) {
+      memberNameInput.value = memberNameQueryParam;
+    }
+  </script>
+</body>
+  
 </body>
 </html>
